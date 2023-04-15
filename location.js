@@ -1,7 +1,8 @@
 
 
 import Geolocation  from '@react-native-community/geolocation';
-
+import browserEnv from 'browser-env';
+browserEnv('Geolocation');
 
 
 const location = {
@@ -23,7 +24,7 @@ const location = {
     },
 
     saveMPH: function(){
-        Geolocation.getCurrentPosition(location.currentPos);
+        Geolocation.getCurrentPosition();
         setTimeout(() => {  Geolocation.getCurrentPosition(location.newPos); }, 5000);
         
         var milesTravelled = Math.acos(Math.sin(location.currentLat)*Math.sin(location.newLat)+Math.cos(location.currentLat)*Math.cos(location.newLat)*Math.cos(location.currentLong - location.newLong)*6371);
@@ -40,3 +41,4 @@ const location = {
 
 location.saveMPH();
 console.log("MPH:" + location.getMPH());
+export default location;

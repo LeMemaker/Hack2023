@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <H1>Please Input Information<H2>
+        <H1 class="heading">Please Input Information</H2>
     </header>
         <body>
-            <H2>Please Input Your Vehicle Make, Model, and Year<H2>
-            <H3>ex. 2023 BMW 328i xDrive</H3>
-            <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John">
+          
+            <style>
+                       .button {
+                            border: none;
+                            color: white;
+                            padding: 6px 10px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 9px;
+                            cursor: pointer;
+                        }
+                        
+                        body{
+                            background-color: rgb(230, 223, 197);
+
+                        }
+                        
+                        .button1 {background-color: darkseagreen;} /* Green */
+
+                        .heading{
+                            color: darkseagreen;
+                            font-family: monaco;
+                        }
+
+                        .heading2{
+                            color: palevioletred;
+                            font-family: optima;
+                        }
+            </style>
+            <H2 class="heading2">Please Input Your Vehicle Make, Model, and Year</H2>
+            <H5 class="heading2">ex. 2023 BMW 328i xDrive</H5>
+  <input class="text heading2" type="text" id="fname" name="fname" value=""><br><br>
+  			<a href="./GUI.html" target="_blank"><input class="button button1" value="Next >" /></a>
         </body>
     <footer>
     </footer>
