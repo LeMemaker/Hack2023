@@ -10,12 +10,27 @@ var main =
     getTotalMiles:function(){
         return carbonCalc.totalMiles;
     },
+    inputCarType: function(){
+        if (carbonCalc.inputCar == "2021 Bugatti Chiron Pur Sport")
+        {
+            carbonCalc.CO2perMile = 893;
+        }
 
-    totalMilesTravelled: function(){
+        else if(carbonCalc.inputCar=="Average car")
+        {
+            return 349;
+        }
+
+        else if(carbonCalc.inputCar=="2022 Mitsubishi Miragez")
+        {
+            return 242;
+        }
+    },
+    totalMilesTravelled: function(time){
  
             setInterval(function() {carbonCalc.totalMiles += main.tempMilesPer5Sec;
                                     console.log(carbonCalc.totalMiles);
-                                    carbonCalc.CO2 *= carbonCalc.CO2perMile } , 5000);
+                                    carbonCalc.CO2 *= carbonCalc.CO2perMile } , time);
             
        
     },
@@ -25,41 +40,29 @@ var main =
     },
 
     getrecycleCalculator: function(){
-        return carbonCalc.recycleCalculator;
+        return carbonCalc.recycleCalculator();
     },
 
     getMilesToTrees: function(){
-        return carbonCalc.milesToTrees;
+        return carbonCalc.milesToTrees();
     },
 
     getTrash: function(){
-        return carbonCalc.poundsCalculations;
+        return carbonCalc.poundsCalculations();
     },
 
 
 
-    inputCarType: function(){
-        if (carbonCalc.car== "2021 Bugatti Chiron Pur Sport")
-        {
-            carbonCalc.CO2perMile = 893;
-        }
-
-        else if(carbonCalc.car=="Average car")
-        {
-            carbonCalc.CO2perMile = 349;
-        }
-
-        else if(car=="2022 Mitsubishi Miragez")
-        {
-            carbonCalc.CO2perMile = 242;
-        }
-    }
+    
     
     
 }
 
-main.totalMilesTravelled();
+main.totalMilesTravelled(50000);
 
+console.log(main.getrecycleCalculator());
+console.log(main.getMilesToTrees());
+console.log(main.getTrash());
 //set carbonCalc vals (input miles) on loop
 
 
