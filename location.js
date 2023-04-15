@@ -1,5 +1,10 @@
 import browserEnv from 'browser-env';
 browserEnv(['navigator']);
+
+import Geolocation  from '@react-native-community/geolocation';
+
+import Varholder from Varholder;
+
 const VarHolder = {
     speed : 0.0
 };
@@ -7,24 +12,28 @@ const VarHolder = {
 const location = {
     
     isCalcMPH: true,
+    currentLat: 0.0,
+    currentLong:0.0,
+    newLat:0.0,
+    newLong:0.0,
     
     currentPos: function(){
-        let currentLat = position.coords.latitude;
-        let currentLong = position.coords.longitude;
+        location.currentLat = position.coords.latitude;
+        location.currentLong = position.coords.longitude;
     },
 
     newPos:function(){
-        let newLat = position.coords.latitude;
-        let newLong = position.coords.longitude;
+        location.newLat = position.coords.latitude;
+        location.newLong = position.coords.longitude;
     },
 
     saveMPH: function(){
-        navigator.geolocation.getCurrentPosition(location.currentPos);
-        setTimeout(() => {  navigator.geolocation.getCurrentPosition(location.newPos); }, 5000);
+        Geolocation.getCurrentPosition(location.currentPos);
+        setTimeout(() => {  Geolocation.getCurrentPosition(location.newPos); }, 5000);
         
-        milesTravelled = Math.acos(Math.sin(currentLat)*Math.sin(newLat)+Math.cos(currentLat)*Math.cos(newLat)*Math.cos(currentLong - newLong)*6371);
+        var milesTravelled = Math.acos(Math.sin(location.currentLat)*Math.sin(location.newLat)+Math.cos(location.currentLat)*Math.cos(location.newLat)*Math.cos(location.currentLong - location.newLong)*6371);
 
-        MPH = milesTravelled / 5 / 5 * 360;
+        var MPH = milesTravelled / 5 / 5 * 360;
 
         VarHolder.speed = MPH;
     }, 

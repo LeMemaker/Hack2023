@@ -7,6 +7,7 @@
     "type": "module",
     "dependencies": {
         "@react-native-community/geolocation": "^3.0.6",
-        "browser-env": "^3.3.0"
+        "browser-env": "^3.3.0",
+        "react-native-geolocation-service": "^5.3.1"
     }
 }
