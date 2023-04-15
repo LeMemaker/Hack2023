@@ -1,13 +1,8 @@
-import browserEnv from 'browser-env';
-browserEnv(['navigator']);
+
 
 import Geolocation  from '@react-native-community/geolocation';
 
-import Varholder from Varholder;
 
-const VarHolder = {
-    speed : 0.0
-};
 
 const location = {
     
