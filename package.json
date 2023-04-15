@@ -1,0 +1,12 @@
+{
+    "name": "mega-hack-2023",
+    "version": "0.0.1",
+    "author": {
+        "name": "Team PLORT"
+    },
+    "type": "module",
+    "dependencies": {
+        "@react-native-community/geolocation": "^3.0.6",
+        "browser-env": "^3.3.0"
+    }
+}

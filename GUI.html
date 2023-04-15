@@ -6,14 +6,14 @@
     </div>
     <link rel="stylesheet" href="GUIStyle.css">
 </header>
-<body>
+
     <div class="speed">
     <H3>Average Speed:</H3>
     <H3>Highest Speed:</H3>
     <H3>Lowest Speed:</H3>
     </div>
     <script>
-
+          
     </script>
     <style>
         .top{
@@ -22,24 +22,59 @@
             font-family: monaco;
         }
         .speed{
-            color: pink;
+            color: palevioletred;
             font-family: optima;
         }
         .actionBar{
             height: 50px;
             background-color: palevioletred
         }
-        .button{
-            height: 15 px;
-            width: 15px;
-            padding: center;
-            background-color: darkseagreen;
-        }
+     .button {
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 9px;
+  cursor: pointer;
+}
+
+.button1 {background-color: darkseagreen;} /* Green */
+
+.body1{
+    color: palevioletred;
+            font-family: optima;
+	}
     </style>
+<body>
+	
+    <form>
+ 
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">Trees</label>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">Community Service</label>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">Recycling</label>
+        
+          <br>  
+          <input type="submit" value="Submit">
+          <button type="button" onclick="myFunction()">Hide content of p</button>
+        </form>
+         <div class="body1">
+    	<H3 id="myTrees">Trees:<H2>
+    </div>
 </body>
 <footer>
 <div class="actionBar">
-    <button type="button">=</button>
+
+    <button class="button button1">=</button>
+  
+    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Profile" /></a>
+
+  
 </div>
 </footer>
 </html>
