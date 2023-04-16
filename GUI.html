@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
+    
 <header>
     <div class="top">
-         <H1>EcoTracker</H1>
+         <H1 class="title">EcoTracker</H1>
     </div>
     <link rel="stylesheet" href="GUIStyle.css">
 </header>
-
+    
+    <script type = "module" src = "./main.js"></script>
+    
     <div class="speed">
-    <H3>Distance Traveled:</H3>
+    
+    
+    <H3 id = "distHead">Distance Traveled:
+        
+        <span id = "distTrav"></span>
+        
+            
+    </H3>
     <H3>Time:</H3>
-    <H3>Total Carbon Emissions:</H3>
+    <H3 id = "carbHead">Total Carbon Emissions:</H3>
+
+        <span id = "carbEm"></span>
+            
+            
     </div>
-    <script type = "text/javascript" src = "./main.js">
-    </script>
+    
     <style>
         .top{
             padding-left: 50px;
@@ -25,9 +38,14 @@
             font-family: optima;
         }
         .actionBar{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 568px;
             height: 50px;
             background-color: palevioletred
         }
+        
      .button {
   border: none;
   color: white;
@@ -48,15 +66,16 @@
 	}
 
     body{
-                            background-color: rgb(230, 223, 197);
+        background-image: url("https://cdn.discordapp.com/attachments/958351167988072461/1096958925980577802/Mountains2.png");
+                            background-repeat: no-repeat
 
                         }
     </style>
 <body>
 	
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Trees" /></a>
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Community Service" /></a>
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Recycling" /></a>
+    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Trees:" /></a><br>
+    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Community Service:" /></a><br>
+    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Recycling" /></a><br>
          <div class="body1">
     	
     </div>

@@ -5,24 +5,9 @@
 var carbonCalc = {
     inputCar : "2021 Bugatti Chiron Pur Sport",
     totalMiles: 100.0,
-    CO2perMile: carbonCalc.inputCarType(),
+    CO2perMile: 5,
     CO2:0,
-    inputCarType: function(){
-        if (carbonCalc.inputCar == "2021 Bugatti Chiron Pur Sport")
-        {
-            return  893;
-        }
-
-        else if(carbonCalc.inputCar=="Average car")
-        {
-            return 349;
-        }
-
-        else if(carbonCalc.inputCar=="2022 Mitsubishi Miragez")
-        {
-            return 242;
-        }
-    },
+    
     poundsCalculations:function(){
         
         var poundsOfTrash = carbonCalc.CO2/434.9597;
@@ -42,7 +27,7 @@ var carbonCalc = {
     milesToTrees: function()
     {
         var treeOutput = (carbonCalc.CO2)/1814.368;
-        return "You can repair your carbon footprint by recylcing " + Math.ceil(treeOutput) + " trees.";
+        return "You can repair your carbon footprint by recycling: " + Math.ceil(treeOutput) + " trees.";
     }
 
     

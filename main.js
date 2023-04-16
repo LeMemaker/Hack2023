@@ -1,12 +1,12 @@
 import carbonCalc from './carbonAndTrashCalculator.js';
 //import location from './location.js';
 
-
-
+var disTrav = document.getElementById("distTrav");
+var carbEm = document.getElementById("carbEm");
 var main =
 {
     carIsRunning: true,
-    tempMilesPer5Sec:0.416,
+    tempMPS:0.833,
     getTotalMiles:function(){
         return carbonCalc.totalMiles;
     },
@@ -26,11 +26,14 @@ var main =
             return 242;
         }
     },
-    totalMilesTravelled: function(time){
+    totalMilesTravelled: function(){
  
-            setInterval(function() {carbonCalc.totalMiles += main.tempMilesPer5Sec;
+            setInterval(function() {carbonCalc.totalMiles += main.tempMPS;
                                     console.log(carbonCalc.totalMiles);
-                                    carbonCalc.CO2 *= carbonCalc.CO2perMile } , time);
+                                    carbonCalc.CO2 = carbonCalc.totalMiles * carbonCalc.CO2perMile;
+                                    disTrav.textContent = carbonCalc.totalMiles;
+                                    distTrav.textContent = carbonCalc.CO2; 
+                                } , 1000);
             
        
     },
@@ -58,11 +61,8 @@ var main =
     
 }
 
-main.totalMilesTravelled(50000);
+window.onload = main.totalMilesTravelled();
 
-console.log(main.getrecycleCalculator());
-console.log(main.getMilesToTrees());
-console.log(main.getTrash());
 //set carbonCalc vals (input miles) on loop
 
 
