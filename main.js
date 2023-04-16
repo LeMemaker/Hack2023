@@ -57,17 +57,17 @@ var main =
         
         tree.addEventListener("click", function() {
             var trees = main.getMilesToTrees()
-            output.textContent = trees;
+                    output.innerText = trees;
         });
         
         comSer.addEventListener("click", function() {
             var community = main.getTrash();
-            output.textContent = community;
+            output.innerText = community;
         });
         
         recycle.addEventListener("click", function() {
             var recycle = main.getrecycleCalculator();
-            output.textContent = recycle;
+            output.innerText = recycle;
         });
 
         main.inputCarType();
@@ -91,7 +91,6 @@ var main =
 
     getrecycleCalculator: function(){
         if(!main.carIsRunning){
-        toggle.addEventListener("click", main.to);
             return carbonCalc.recycleCalculator();
         }
         else

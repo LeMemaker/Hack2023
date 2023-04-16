@@ -11,18 +11,18 @@ var carbonCalc = {
     poundsCalculations:function(){
         
         var poundsOfTrash = carbonCalc.CO2/434.9597;
-        return "You can repair your carbon footprint by picking up: " + Math.ceil(poundsOfTrash) + " pounds of trash."
+        return "You can repair your carbon footprint by picking up: " + Math.ceil(poundsOfTrash) + " pounds of trash.";
     },
     recycleCalculator:function()
     {
        
-    var paper = (carbonCalc.CO2*1.01413);
-    var glass = (carbonCalc.CO2*0.683433);
-    var plastic = (carbonCalc.CO2*2.380992);
-    var metals = (carbonCalc.CO2*17.94563);
+    var paper = (carbonCalc.CO2/1.01413);
+    var glass = (carbonCalc.CO2/0.683433);
+    var plastic = (carbonCalc.CO2/2.380992);
+    var metals = (carbonCalc.CO2/17.94563);
 
-    return "You can repair your carbon footprint by recylcing: " + Math.ceil(paper) + " pounds of paper, " + Math.ceil(glass) 
-    + " pounds of glass, " + Math.ceil(plastic) + " pounds of plastic, " + Math.ceil(metals)+ " pounds of metals.";
+    return "You can repair your carbon footprint by recycling: " + Math.ceil(paper) + " pounds of paper, or " + Math.ceil(glass) 
+    + " pounds of glass, or " + Math.ceil(plastic) + " pounds of plastic, or " + Math.ceil(metals)+ " pounds of metals.";
     },
     milesToTrees: function()
     {

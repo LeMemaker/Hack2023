@@ -27,6 +27,28 @@
     margin: 9px;
     cursor: pointer;
 }
+.button3{
+    border-color: darkseagreen;
+    border-width: medium;
+    border-style: solid;
+    border-radius: 20px;
+    color: darkseagreen;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 9px;
+    cursor: pointer;
+}
+.button4{
+    position: fixed;
+    top: 200px;
+    right: 970px;
+    width: 200px;
+    height: 165px;
+    background-color: #E5EDDD;
+}
 
 .button2{
 background-color: palevioletred;
@@ -44,3 +66,4 @@ background-image: url("https://cdn.discordapp.com/attachments/958351167988072461
                     background-repeat: no-repeat
 
                 }
+   
