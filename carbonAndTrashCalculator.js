@@ -4,8 +4,8 @@
 
 var carbonCalc = {
     inputCar : "2021 Bugatti Chiron Pur Sport",
-    totalMiles: 100.0,
-    CO2perMile: 5,
+    totalMiles: 0,
+    CO2perMile: 0,
     CO2:0,
     
     poundsCalculations:function(){
@@ -19,7 +19,7 @@ var carbonCalc = {
     var paper = (carbonCalc.CO2*1.01413);
     var glass = (carbonCalc.CO2*0.683433);
     var plastic = (carbonCalc.CO2*2.380992);
-    var metals = (carbonCalc.CO2/17.94563);
+    var metals = (carbonCalc.CO2*17.94563);
 
     return "You can repair your carbon footprint by recylcing: " + Math.ceil(paper) + " pounds of paper, " + Math.ceil(glass) 
     + " pounds of glass, " + Math.ceil(plastic) + " pounds of plastic, " + Math.ceil(metals)+ " pounds of metals.";

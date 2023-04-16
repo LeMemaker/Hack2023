@@ -3,10 +3,24 @@ import carbonCalc from './carbonAndTrashCalculator.js';
 
 var disTrav = document.getElementById("distTrav");
 var carbEm = document.getElementById("carbEm");
+var time = document.getElementById("time");
+var toggle = document.getElementById("carToggle");
 var main =
 {
     carIsRunning: true,
-    tempMPS:0.833,
+    tempMPS:0.00833,
+    toggleDrive:function(){
+        if(this.carIsRunning){
+            this.carIsRunning = false;
+            this.tempMps = 0;
+            toggle.textContent = "Start Driving";
+        }
+        else{
+            this.carIsRunning = true;
+            this.tempMPS = 0.00833;
+            toggle.textContent = "Stop Driving";
+        }
+    },
     getTotalMiles:function(){
         return carbonCalc.totalMiles;
     },
@@ -18,21 +32,25 @@ var main =
 
         else if(carbonCalc.inputCar=="Average car")
         {
-            return 349;
+            carbonCalc.CO2perMile =  349;
         }
 
         else if(carbonCalc.inputCar=="2022 Mitsubishi Miragez")
         {
-            return 242;
+            carbonCalc.CO2perMile =  242;
         }
     },
-    totalMilesTravelled: function(){
- 
-            setInterval(function() {carbonCalc.totalMiles += main.tempMPS;
+    initializeMain: function(){
+        main.inputCarType();
+        var timeVal = 0;
+        setInterval(function() {carbonCalc.totalMiles += main.tempMPS;
                                     console.log(carbonCalc.totalMiles);
                                     carbonCalc.CO2 = carbonCalc.totalMiles * carbonCalc.CO2perMile;
-                                    disTrav.textContent = carbonCalc.totalMiles;
-                                    distTrav.textContent = carbonCalc.CO2; 
+                                    disTrav.textContent = Math.round(carbonCalc.totalMiles*100)/100 + " miles";
+                                    carbEm.textContent = Math.round((carbonCalc.CO2 / 1000) * 100) /100 + " kilograms";
+                                    time.textContent = timeVal + " seconds";
+                                    timeVal += 1;
+
                                 } , 1000);
             
        
@@ -61,7 +79,7 @@ var main =
     
 }
 
-window.onload = main.totalMilesTravelled();
+window.onload = main.initializeMain();
 
 //set carbonCalc vals (input miles) on loop
 

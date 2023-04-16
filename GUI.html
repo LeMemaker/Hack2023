@@ -19,10 +19,14 @@
         
             
     </H3>
-    <H3>Time:</H3>
-    <H3 id = "carbHead">Total Carbon Emissions:</H3>
-
+    <H3 id = "timeHead">Time:
+        <span id = "time"></span>
+    </H3>
+    <H3 id = "carbHead">Total Carbon Emissions:
         <span id = "carbEm"></span>
+    </H3>
+
+        
             
             
     </div>
@@ -58,6 +62,10 @@
   cursor: pointer;
 }
 
+.carToggle{
+    background-color: red;
+}
+
 .button1 {background-color: darkseagreen;} /* Green */
 
 .body1{
@@ -75,7 +83,8 @@
 	
     <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Trees:" /></a><br>
     <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Community Service:" /></a><br>
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Recycling" /></a><br>
+    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Recycling:" /></a><br>
+    <a href="/filepath/file.pdf" id="carToggle" target="_blank"><input class="button button1 carToggle" value="Stop Driving" /></a><br>
          <div class="body1">
     	
     </div>
