@@ -1,0 +1,46 @@
+.top{
+    padding-left: 50px;
+    color: darkseagreen;
+    font-family: monaco;
+}
+.speed{
+    color: palevioletred;
+    font-family: optima;
+}
+.actionBar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 568px;
+    height: 50px;
+    background-color: palevioletred
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px;
+    cursor: pointer;
+}
+
+.button2{
+background-color: palevioletred;
+}
+
+.button1 {background-color: darkseagreen;} /* Green */
+
+.body1{
+color: palevioletred;
+    font-family: optima;
+}
+
+body{
+background-image: url("https://cdn.discordapp.com/attachments/958351167988072461/1096958925980577802/Mountains2.png");
+                    background-repeat: no-repeat
+
+                }

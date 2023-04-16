@@ -2,6 +2,7 @@
 <html>
     
 <header>
+    <link rel="stylesheet" href="GUIStyle.css">
     <div class="top">
          <H1 class="title">EcoTracker</H1>
     </div>
@@ -31,60 +32,14 @@
             
     </div>
     
-    <style>
-        .top{
-            padding-left: 50px;
-            color: darkseagreen;
-            font-family: monaco;
-        }
-        .speed{
-            color: palevioletred;
-            font-family: optima;
-        }
-        .actionBar{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 568px;
-            height: 50px;
-            background-color: palevioletred
-        }
-        
-     .button {
-  border: none;
-  color: white;
-  padding: 6px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 9px;
-  cursor: pointer;
-}
-
-.carToggle{
-    background-color: red;
-}
-
-.button1 {background-color: darkseagreen;} /* Green */
-
-.body1{
-    color: palevioletred;
-            font-family: optima;
-	}
-
-    body{
-        background-image: url("https://cdn.discordapp.com/attachments/958351167988072461/1096958925980577802/Mountains2.png");
-                            background-repeat: no-repeat
-
-                        }
-    </style>
+    
 <body>
 	
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Trees:" /></a><br>
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Community Service:" /></a><br>
-    <a href="/filepath/file.pdf" target="_blank"><input class="button button1" value="Recycling:" /></a><br>
-    <a href="/filepath/file.pdf" id="carToggle" target="_blank"><input class="button button1 carToggle" value="Stop Driving" /></a><br>
+    <a target="_blank"><input class="button button1" value="Trees:" readonly/></a><br>
+    <a target="_blank"><input class="button button1" value="Community Service:" readonly/></a><br>
+    <a target="_blank"><input class="button button1" value="Recycling:" readonly/></a><br>
+    <a id="carToggle" target="_blank"><input class="button button2" value="Stop Driving" readonly/></a><br>
+    
          <div class="body1">
     	
     </div>

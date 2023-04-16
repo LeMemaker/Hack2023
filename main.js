@@ -5,22 +5,27 @@ var disTrav = document.getElementById("distTrav");
 var carbEm = document.getElementById("carbEm");
 var time = document.getElementById("time");
 var toggle = document.getElementById("carToggle");
+
+
+function toggleDrive(){
+    if(this.carIsRunning){
+        this.carIsRunning = false;
+        this.tempMps = 0;
+        toggle.textContent = "Start Driving";
+    }
+    else{
+        this.carIsRunning = true;
+        this.tempMPS = 0.00833;
+        toggle.textContent = "Stop Driving";
+    }
+}
+
+
 var main =
 {
     carIsRunning: true,
     tempMPS:0.00833,
-    toggleDrive:function(){
-        if(this.carIsRunning){
-            this.carIsRunning = false;
-            this.tempMps = 0;
-            toggle.textContent = "Start Driving";
-        }
-        else{
-            this.carIsRunning = true;
-            this.tempMPS = 0.00833;
-            toggle.textContent = "Stop Driving";
-        }
-    },
+   
     getTotalMiles:function(){
         return carbonCalc.totalMiles;
     },
@@ -41,6 +46,7 @@ var main =
         }
     },
     initializeMain: function(){
+        toggle.addEventListener("click", toggleDrive);
         main.inputCarType();
         var timeVal = 0;
         setInterval(function() {carbonCalc.totalMiles += main.tempMPS;
@@ -78,6 +84,7 @@ var main =
     
     
 }
+
 
 window.onload = main.initializeMain();
 
