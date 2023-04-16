@@ -1,2 +1,4 @@
 # Hack2023
- MEGA Hackathon 2023 project
+EcoTracker
+MEGA Hackathon 2023 Project
+Need to use Live Server extension on IDE of choice for JavaScript to work
